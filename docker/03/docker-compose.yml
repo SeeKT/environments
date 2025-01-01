@@ -1,0 +1,11 @@
+services:
+  attacker:
+    build: ./attacker
+    tty: true
+    environment:
+      - SHELL=/bin/bash
+    volumes:
+      - ./:/root/workspace
+  target:
+    image: tleemcjr/metasploitable2
+    tty: true
